@@ -1,0 +1,413 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio Performance Report</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f8fafc",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              "2xl": "2rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .ios-shadow {
+        box-shadow:
+          0 4px 24px -1px rgba(0, 0, 0, 0.04),
+          0 2px 8px -1px rgba(0, 0, 0, 0.02);
+      }
+      .chart-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(19, 127, 236, 0.12) 0%,
+          rgba(19, 127, 236, 0) 100%
+        );
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light text-slate-900 min-h-screen pb-4">
+    <div
+      class="sticky top-0 z-50 flex items-center bg-white p-4 pb-2 justify-between border-b border-[#dbe0e6]"
+    >
+      <div class="flex size-12 shrink-0 items-center">
+        <button
+          class="flex items-center justify-center p-2 -ml-2"
+          onclick="window.location.href = 'reports.html'"
+        >
+          <span class="material-symbols-outlined !text-[28px]"
+            >arrow_back_ios_new</span
+          >
+        </button>
+      </div>
+      <h2
+        class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display"
+      >
+        Portfolio Performance
+      </h2>
+      <div class="flex w-12 items-center justify-end">
+        <button
+          class="flex cursor-pointer items-center justify-center rounded-xl h-12 bg-transparent text-[#111418] p-0"
+        >
+          <span class="material-symbols-outlined">ios_share</span>
+        </button>
+      </div>
+    </div>
+    <main class="px-5 py-6 space-y-6">
+      <div class="bg-primary/5 rounded-2xl p-5 border border-primary/10">
+        <div class="flex items-center gap-2 mb-3">
+          <span
+            class="material-symbols-outlined text-primary text-xl font-variation-fill"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >auto_awesome</span
+          >
+          <h4
+            class="text-[11px] font-extrabold text-primary uppercase tracking-widest"
+          >
+            AI Performance Insight
+          </h4>
+        </div>
+        <div class="space-y-2">
+          <p class="text-xs font-bold text-slate-400 uppercase tracking-tight">
+            Why this matters
+          </p>
+          <p class="text-[14px] text-slate-700 leading-relaxed font-medium">
+            This report shows your
+            <span class="text-slate-900 font-bold">objective progress</span>,
+            removing intuition and providing a factual picture of your financial
+            success.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div
+          class="bg-white p-5 rounded-2xl ios-shadow border border-slate-100 flex flex-col gap-1"
+        >
+          <span
+            class="text-[11px] font-bold text-slate-400 uppercase tracking-wider"
+            >Total Gain/Loss</span
+          >
+          <span class="text-xl font-extrabold text-emerald-600">+$15,420</span>
+          <span class="text-[10px] text-emerald-500 font-bold">+12.4%</span>
+        </div>
+        <div
+          class="bg-white p-5 rounded-2xl ios-shadow border border-slate-100 flex flex-col gap-1"
+        >
+          <span
+            class="text-[11px] font-bold text-slate-400 uppercase tracking-wider"
+            >vs S&amp;P 500</span
+          >
+          <span class="text-xl font-extrabold text-slate-900">+4.2%</span>
+          <span class="text-[10px] text-slate-400 font-bold"
+            >Outperforming</span
+          >
+        </div>
+      </div>
+      <section class="space-y-2">
+        <div class="flex bg-slate-200/50 p-1 rounded-xl">
+          <button
+            class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-500"
+          >
+            1W
+          </button>
+          <button
+            class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-500"
+          >
+            1M
+          </button>
+          <button
+            class="flex-1 py-2 text-xs font-bold rounded-lg transition-all bg-white text-primary shadow-sm"
+          >
+            3M
+          </button>
+          <button
+            class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-500"
+          >
+            1Y
+          </button>
+          <button
+            class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-500"
+          >
+            ALL
+          </button>
+        </div>
+        <div
+          class="bg-white p-6 rounded-2xl ios-shadow border border-slate-100 overflow-hidden"
+        >
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="text-sm font-bold text-slate-800">Growth Over Time</h3>
+              <p class="text-[10px] text-slate-400 font-medium mt-0.5">
+                Total Value: $154,220.00
+              </p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-1.5">
+                <div class="w-2 h-2 rounded-full bg-primary"></div>
+                <span class="text-[10px] font-bold text-slate-500"
+                  >Portfolio</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="relative h-48 w-full mt-4">
+            <svg
+              class="w-full h-full"
+              preserveAspectRatio="none"
+              viewBox="0 0 100 100"
+            >
+              <path
+                d="M0 70 L 20 65 L 40 68 L 60 55 L 80 50 L 100 45"
+                fill="none"
+                stroke="#cbd5e1"
+                stroke-dasharray="4 2"
+                stroke-width="2"
+              ></path>
+              <path
+                class="fill-primary/5"
+                d="M0 80 Q 20 85, 40 60 T 70 40 T 100 10 V 100 H 0 Z"
+              ></path>
+              <path
+                d="M0 80 Q 20 85, 40 60 T 70 40 T 100 10"
+                fill="none"
+                stroke="#137fec"
+                stroke-linecap="round"
+                stroke-width="3"
+              ></path>
+            </svg>
+            <div
+              class="absolute inset-y-0 right-0 flex flex-col justify-between py-1 text-[9px] font-bold text-slate-300 pointer-events-none"
+            >
+              <span>$160k</span>
+              <span>$120k</span>
+              <span>$80k</span>
+              <span>$40k</span>
+            </div>
+          </div>
+          <div
+            class="flex justify-between mt-4 px-1 text-[10px] font-bold text-slate-400"
+          >
+            <span>OCT</span>
+            <span>NOV</span>
+            <span>DEC</span>
+            <span>JAN</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3
+          class="text-sm font-bold text-slate-800 mb-4 px-1 uppercase tracking-wider text-[11px]"
+        >
+          Periodic Growth
+        </h3>
+        <div
+          class="bg-white rounded-2xl ios-shadow border border-slate-100 overflow-hidden"
+        >
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-slate-50">
+                <th
+                  class="py-4 px-5 text-[10px] font-bold text-slate-400 uppercase tracking-wider"
+                >
+                  Period
+                </th>
+                <th
+                  class="py-4 px-5 text-[10px] font-bold text-slate-400 uppercase tracking-wider text-right"
+                >
+                  Return
+                </th>
+                <th
+                  class="py-4 px-5 text-[10px] font-bold text-slate-400 uppercase tracking-wider text-right"
+                >
+                  Value Delta
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-50">
+              <tr>
+                <td class="py-4 px-5 text-sm font-bold text-slate-700">
+                  Month-to-Date
+                </td>
+                <td
+                  class="py-4 px-5 text-sm font-extrabold text-emerald-600 text-right"
+                >
+                  +2.4%
+                </td>
+                <td
+                  class="py-4 px-5 text-sm font-bold text-slate-500 text-right"
+                >
+                  +$3,210
+                </td>
+              </tr>
+              <tr>
+                <td class="py-4 px-5 text-sm font-bold text-slate-700">
+                  Quarter-to-Date
+                </td>
+                <td
+                  class="py-4 px-5 text-sm font-extrabold text-emerald-600 text-right"
+                >
+                  +12.4%
+                </td>
+                <td
+                  class="py-4 px-5 text-sm font-bold text-slate-500 text-right"
+                >
+                  +$15,420
+                </td>
+              </tr>
+              <tr>
+                <td class="py-4 px-5 text-sm font-bold text-slate-700">
+                  Year-to-Date
+                </td>
+                <td
+                  class="py-4 px-5 text-sm font-extrabold text-emerald-600 text-right"
+                >
+                  +18.2%
+                </td>
+                <td
+                  class="py-4 px-5 text-sm font-bold text-slate-500 text-right"
+                >
+                  +$22,840
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-slate-800">
+            Top Performing Assets
+          </h3>
+          <button class="text-xs font-bold text-primary">View All</button>
+        </div>
+        <div class="space-y-3">
+          <div
+            class="bg-white p-4 rounded-xl ios-shadow border border-slate-50 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-slate-600"
+                  >currency_bitcoin</span
+                >
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-800">Bitcoin</p>
+                <p class="text-[10px] text-slate-500">BTC / USD</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-bold text-emerald-600">+$8,420</p>
+              <p class="text-[10px] text-emerald-500 font-bold">+28.4%</p>
+            </div>
+          </div>
+          <div
+            class="bg-white p-4 rounded-xl ios-shadow border border-slate-50 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-slate-600"
+                  >rocket_launch</span
+                >
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-800">NVIDIA Corp.</p>
+                <p class="text-[10px] text-slate-500">NVDA / NASDAQ</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-bold text-emerald-600">+$3,150</p>
+              <p class="text-[10px] text-emerald-500 font-bold">+18.2%</p>
+            </div>
+          </div>
+          <div
+            class="bg-white p-4 rounded-xl ios-shadow border border-slate-50 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-slate-600"
+                  >ios</span
+                >
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-800">Apple Inc.</p>
+                <p class="text-[10px] text-slate-500">AAPL / NASDAQ</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-bold text-emerald-600">+$1,240</p>
+              <p class="text-[10px] text-emerald-500 font-bold">+6.5%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="mt-10 p-5 bg-blue-50/50 rounded-2xl border border-blue-100/50"
+      >
+        <div class="flex items-center gap-2 mb-3">
+          <span
+            class="material-symbols-outlined text-primary text-sm font-variation-fill"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >auto_awesome</span
+          >
+          <h4
+            class="text-xs font-extrabold text-blue-900 uppercase tracking-widest"
+          >
+            Performance Insight
+          </h4>
+        </div>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Your portfolio has outperformed the
+          <span class="font-bold text-slate-800">S&amp;P 500 by 4.2%</span> over
+          the last 3 months, largely driven by tech sector exposure and timing
+          on crypto entries.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio Overview</title>
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              success: "#078838",
+              warning: "#f59e0b",
+              danger: "#e73908",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <main class="px-5 pt-6 pb-12">
+      <header class="mb-8 pt-3">
+        <h2
+          class="text-3xl font-extrabold text-slate-900 dark:text-white leading-tight"
+        >
+          My Portfolio
+        </h2>
+      </header>
+      <!-- Hero Balance Section -->
+      <section class="flex flex-col items-center px-6 pt-6 pb-8">
+        <div
+          class="mb-2 flex items-center gap-2 rounded-full bg-white dark:bg-white/5 px-4 py-1 shadow-sm"
+        >
+          <span class="size-2 rounded-full bg-success animate-pulse"></span>
+          <p class="text-sm font-medium text-[#617589] dark:text-gray-400">
+            Looking steady today
+          </p>
+        </div>
+        <h2 class="text-[40px] font-extrabold tracking-tight">$124,592.00</h2>
+        <div class="flex items-center gap-1.5 text-success">
+          <span class="material-symbols-outlined text-[18px]">trending_up</span>
+          <p class="text-base font-bold">+2.4% (+$2,918.00)</p>
+        </div>
+      </section>
+
+      <!-- Diversification View (Horizontal Scroll) -->
+      <section class="mb-10">
+        <div class="flex items-center justify-between px-6 mb-4">
+          <h3 class="text-xl font-bold">Diversification</h3>
+          <button class="text-sm font-semibold text-primary">Details</button>
+        </div>
+        <div class="flex gap-4 overflow-x-auto px-6 hide-scrollbar">
+          <!-- Card 1 -->
+          <div
+            class="min-w-[160px] flex-shrink-0 rounded-xl bg-primary p-5 text-white shadow-lg shadow-primary/20"
+          >
+            <div
+              class="mb-4 flex size-10 items-center justify-center rounded-lg bg-white/20"
+            >
+              <span class="material-symbols-outlined">laptop_mac</span>
+            </div>
+            <p class="text-xs font-medium opacity-80">Technology</p>
+            <p class="text-2xl font-bold">42.5%</p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="min-w-[160px] flex-shrink-0 rounded-xl bg-white dark:bg-white/5 p-5 shadow-sm border border-gray-100 dark:border-white/10"
+          >
+            <div
+              class="mb-4 flex size-10 items-center justify-center rounded-lg bg-background-light dark:bg-white/10 text-primary"
+            >
+              <span class="material-symbols-outlined">currency_bitcoin</span>
+            </div>
+            <p class="text-xs font-medium text-[#617589] dark:text-gray-400">
+              Crypto
+            </p>
+            <p class="text-2xl font-bold">12.8%</p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="min-w-[160px] flex-shrink-0 rounded-xl bg-white dark:bg-white/5 p-5 shadow-sm border border-gray-100 dark:border-white/10"
+          >
+            <div
+              class="mb-4 flex size-10 items-center justify-center rounded-lg bg-background-light dark:bg-white/10 text-primary"
+            >
+              <span class="material-symbols-outlined">account_balance</span>
+            </div>
+            <p class="text-xs font-medium text-[#617589] dark:text-gray-400">
+              S&amp;P 500
+            </p>
+            <p class="text-2xl font-bold">34.2%</p>
+          </div>
+        </div>
+      </section>
+      <!-- Current Assets List -->
+      <section class="px-6 mb-10">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl font-bold">Current Assets</h3>
+          <button
+            class="flex items-center gap-1 text-sm font-semibold text-[#617589]"
+          ></button>
+        </div>
+        <div class="space-y-4">
+          <!-- Asset Item 1 -->
+          <div
+            class="flex items-center gap-4 rounded-xl bg-white dark:bg-white/5 p-4 shadow-sm"
+          >
+            <div
+              class="flex size-12 items-center justify-center rounded-full bg-gray-100 dark:bg-white/10"
+            >
+              <span
+                class="material-symbols-outlined text-gray-700 dark:text-gray-300"
+                >ios</span
+              >
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-1.5">
+                <p class="font-bold">AAPL</p>
+                <span
+                  class="size-1.5 rounded-full bg-success"
+                  title="Low Volatility"
+                ></span>
+              </div>
+              <p class="text-xs text-[#617589]">Apple Inc.</p>
+            </div>
+            <div class="w-16 h-8">
+              <svg class="w-full h-full" viewbox="0 0 100 40">
+                <path
+                  d="M0 30 Q 25 10, 50 25 T 100 5"
+                  fill="none"
+                  stroke="#078838"
+                  stroke-linecap="round"
+                  stroke-width="2.5"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-right">
+              <p class="font-bold">$15,200</p>
+              <p class="text-xs font-bold text-success">+1.2%</p>
+            </div>
+          </div>
+          <!-- Asset Item 2 -->
+          <div
+            class="flex items-center gap-4 rounded-xl bg-white dark:bg-white/5 p-4 shadow-sm"
+          >
+            <div
+              class="flex size-12 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-500/20"
+            >
+              <span class="material-symbols-outlined text-orange-600"
+                >currency_bitcoin</span
+              >
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-1.5">
+                <p class="font-bold">BTC</p>
+                <span
+                  class="size-1.5 rounded-full bg-danger"
+                  title="High Volatility"
+                ></span>
+              </div>
+              <p class="text-xs text-[#617589]">Bitcoin</p>
+            </div>
+            <div class="w-16 h-8">
+              <svg class="w-full h-full" viewbox="0 0 100 40">
+                <path
+                  d="M0 10 Q 25 35, 50 15 T 100 30"
+                  fill="none"
+                  stroke="#e73908"
+                  stroke-linecap="round"
+                  stroke-width="2.5"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-right">
+              <p class="font-bold">$8,420</p>
+              <p class="text-xs font-bold text-danger">-0.8%</p>
+            </div>
+          </div>
+          <!-- Asset Item 3 -->
+          <div
+            class="flex items-center gap-4 rounded-xl bg-white dark:bg-white/5 p-4 shadow-sm"
+          >
+            <div
+              class="flex size-12 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-500/20"
+            >
+              <span class="material-symbols-outlined text-blue-600"
+                >trending_up</span
+              >
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-1.5">
+                <p class="font-bold">VOO</p>
+                <span
+                  class="size-1.5 rounded-full bg-warning"
+                  title="Medium Volatility"
+                ></span>
+              </div>
+              <p class="text-xs text-[#617589]">S&amp;P 500 ETF</p>
+            </div>
+            <div class="w-16 h-8">
+              <svg class="w-full h-full" viewbox="0 0 100 40">
+                <path
+                  d="M0 25 Q 25 20, 50 15 T 100 10"
+                  fill="none"
+                  stroke="#078838"
+                  stroke-linecap="round"
+                  stroke-width="2.5"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-right">
+              <p class="font-bold">$22,100</p>
+              <p class="text-xs font-bold text-success">+0.5%</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <button
+              class="flex items-center gap-1 text-sm font-semibold text-[#617589]"
+            >
+              <span class="material-symbols-outlined text-[18px]"
+                >keyboard_arrow_down</span
+              >
+              Show More
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Risk Exposure Summary -->
+      <section class="px-6 pb-12">
+        <div
+          class="rounded-2xl bg-white dark:bg-white/5 p-6 shadow-sm border border-gray-100 dark:border-white/10"
+        >
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="text-lg font-bold">Risk Exposure</h3>
+              <p class="text-xs text-[#617589]">Aggressive Growth Profile</p>
+            </div>
+            <div
+              class="flex size-14 items-center justify-center rounded-full border-4 border-primary/30"
+            >
+              <span class="text-xl font-extrabold text-primary">7.2</span>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1.5">
+                <span>Equity Exposure</span>
+                <span>75%</span>
+              </div>
+              <div
+                class="h-2 w-full rounded-full bg-gray-100 dark:bg-white/10 overflow-hidden"
+              >
+                <div
+                  class="h-full bg-primary rounded-full"
+                  style="width: 75%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1.5">
+                <span>Alternative Assets</span>
+                <span>15%</span>
+              </div>
+              <div
+                class="h-2 w-full rounded-full bg-gray-100 dark:bg-white/10 overflow-hidden"
+              >
+                <div
+                  class="h-full bg-warning rounded-full"
+                  style="width: 15%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1.5">
+                <span>Cash &amp; Bonds</span>
+                <span>10%</span>
+              </div>
+              <div
+                class="h-2 w-full rounded-full bg-gray-100 dark:bg-white/10 overflow-hidden"
+              >
+                <div
+                  class="h-full bg-success rounded-full"
+                  style="width: 10%"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-6 flex gap-3 p-4 rounded-xl bg-primary/5 dark:bg-primary/20"
+          >
+            <span class="material-symbols-outlined text-primary text-[20px]"
+              >info</span
+            >
+            <p
+              class="text-xs font-medium leading-relaxed text-[#111418] dark:text-gray-200"
+            >
+              Your portfolio volatility is higher than 65% of peer investors.
+              Consider adding more bonds to lower your risk score.
+            </p>
+          </div>
+        </div>
+      </section>
+      <nav
+        class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-2xl border-t border-gray-100 flex justify-around items-center pt-3 pb-4 px-2 z-50"
+      >
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'main.html'"
+        >
+          <span
+            class="material-symbols-outlined text-gray-400 group-active:text-primary"
+            >home</span
+          >
+          <span class="text-[10px] font-bold text-gray-400">Home</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'portfolio.html'"
+        >
+          <span class="material-symbols-outlined text-primary">bar_chart</span>
+          <span class="text-[10px] font-bold text-primary">Portfolio</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'watchlist.html'"
+        >
+          <span
+            class="material-symbols-outlined text-gray-400 group-active:text-primary"
+            >candlestick_chart</span
+          >
+          <span class="text-[10px] font-bold text-gray-400">Watchlist</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'strategies.html'"
+        >
+          <span
+            class="material-symbols-outlined text-gray-400 group-active:text-primary"
+            >layers</span
+          >
+          <span class="text-[10px] font-bold text-gray-400">Strategies</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'reports.html'"
+        >
+          <span
+            class="material-symbols-outlined text-gray-400 group-active:text-primary"
+            >description</span
+          >
+          <span
+            class="text-[10px] font-bold text-gray-400"
+            onclick="window.location.href = 'reports.html'"
+            >Reports</span
+          >
+        </button>
+      </nav>
+    </main>
+  </body>
+</html>

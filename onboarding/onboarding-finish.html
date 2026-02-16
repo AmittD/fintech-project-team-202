@@ -1,0 +1,200 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Onboarding: Final Preferences</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "light-blue-progress": "#bae6fd",
+              "neutral-chip": "#f3f4f6",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Manrope", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        background-color: #ffffff;
+      }
+      .ios-shadow {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-white font-display text-[#111418] min-h-screen flex flex-col">
+    <div class="bg-white">
+      <header class="bg-white pt-6 px-4">
+        <div class="flex items-center justify-between mb-4">
+          <button
+            class="w-10 h-10 flex items-center justify-start text-black"
+            onclick="window.location.href = 'onboarding-4.html'"
+          >
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+          </button>
+          <h2
+            class="text-xs font-bold tracking-[0.1em] uppercase text-gray-500"
+          >
+            Step 4 of 4
+          </h2>
+          <div class="w-10"></div>
+        </div>
+        <div class="flex flex-col gap-2 mb-6 px-2">
+          <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+            <div
+              class="bg-primary h-full rounded-full transition-all duration-500"
+              style="width: 100%"
+            ></div>
+          </div>
+        </div>
+      </header>
+    <div class="flex-1 overflow-y-auto px-6 pb-40">
+      <h1
+        class="text-[32px] font-extrabold leading-tight tracking-tight pt-6 text-[#111418]"
+      >
+        Final touches
+      </h1>
+      <p class="text-[17px] font-medium text-gray-500 pt-2 pb-8">
+        Customize your experience before we dive in.
+      </p>
+      <div class="mb-6">
+        <div class="flex items-center gap-2 mb-4">
+          <span
+            class="material-symbols-outlined text-primary text-xl font-semibold"
+            >notifications_active</span
+          >
+          <h3 class="text-lg font-bold">Notification Intensity</h3>
+        </div>
+        <div class="bg-gray-100 p-1 rounded-xl flex">
+          <button
+            class="flex-1 py-2.5 text-sm font-bold text-center rounded-lg text-gray-500 transition-all"
+          >
+            Low
+          </button>
+          <button
+            class="flex-1 py-2.5 text-sm font-bold text-center rounded-lg bg-white shadow-sm text-primary transition-all"
+          >
+            Medium
+          </button>
+          <button
+            class="flex-1 py-2.5 text-sm font-bold text-center rounded-lg text-gray-500 transition-all"
+          >
+            High
+          </button>
+        </div>
+        <p
+          class="text-xs font-medium text-gray-400 mt-3 px-1 text-center italic"
+        >
+          "Medium" is recommended for active emotion-tracking.
+        </p>
+      </div>
+      <div class="mb-6">
+        <div class="flex items-center gap-2 mb-4">
+          <span
+            class="material-symbols-outlined text-primary text-xl font-semibold"
+            >account_balance_wallet</span
+          >
+          <h3 class="text-lg font-bold">Preferred Asset Classes</h3>
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <button
+            class="px-5 py-3 rounded-full bg-neutral-chip text-primary font-bold flex items-center gap-2 border border-transparent"
+          >
+            <span class="material-symbols-outlined text-[18px]"
+              >trending_up</span
+            >
+            Stocks
+          </button>
+          <button
+            class="px-5 py-3 rounded-full bg-neutral-chip text-primary font-bold flex items-center gap-2 border border-transparent"
+          >
+            <span class="material-symbols-outlined text-[18px]"
+              >currency_bitcoin</span
+            >
+            Crypto
+          </button>
+          <button
+            class="px-5 py-3 rounded-full bg-white text-gray-400 font-bold flex items-center gap-2 border border-gray-100"
+          >
+            <span class="material-symbols-outlined text-[18px]">pie_chart</span>
+            ETFs
+          </button>
+          <button
+            class="px-5 py-3 rounded-full bg-white text-gray-400 font-bold flex items-center gap-2 border border-gray-100"
+          >
+            <span class="material-symbols-outlined text-[18px]">token</span>
+            Bonds
+          </button>
+        </div>
+      </div>
+      <div
+        class="bg-gray-50 rounded-2xl p-5 border border-gray-100 mb-8 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-4">
+          <div class="bg-primary/10 p-2.5 rounded-xl text-primary">
+            <span class="material-symbols-outlined">school</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-[16px] leading-tight text-[#111418]">
+              Start Tutorial
+            </h4>
+            <p class="text-sm text-gray-500 mt-0.5">Quick guide to the UI</p>
+          </div>
+        </div>
+        <div class="relative inline-flex items-center cursor-pointer">
+          <input checked="" class="sr-only peer" type="checkbox" />
+          <div
+            class="w-12 h-7 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-[20px] peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md pt-4 pb-10 px-6 border-t border-gray-50"
+    >
+      <button
+        class="w-full bg-primary text-white font-extrabold text-lg py-4 rounded-2xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-3"
+        onclick="window.location.href = '../main.html'"
+      >
+        Finish
+        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+      </button>
+      <div class="flex items-center justify-center gap-1.5 mt-5 opacity-40">
+        <span class="material-symbols-outlined text-sm">lock</span>
+        <p class="text-[10px] uppercase font-bold tracking-[0.1em]">
+          Secure Encryption Active
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

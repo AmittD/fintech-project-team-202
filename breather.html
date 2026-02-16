@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mindful Trading Nudge</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts: Manrope -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols Outlined -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <!-- Behavioral Prompt Overlay (BottomSheet/Modal) -->
+    <div class="absolute inset-0 z-50 flex flex-col justify-end bg-black/40">
+      <!-- Modal Container -->
+      <div
+        class="flex flex-col items-stretch bg-white rounded-t-[2.5rem] shadow-2xl animate-in slide-in-from-bottom duration-300"
+      >
+        <!-- Bottom Sheet Handle -->
+        <div class="flex h-8 w-full items-center justify-center">
+          <div class="h-1.5 w-12 rounded-full bg-[#e2e8f0]"></div>
+        </div>
+        <!-- Content Area -->
+        <div class="px-6 pb-12 pt-2">
+          <!-- Badge Section -->
+          <div class="flex justify-center mb-6">
+            <div
+              class="h-16 w-16 bg-primary/20 rounded-full flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-4xl"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >self_improvement</span
+              >
+            </div>
+          </div>
+          <!-- Header -->
+          <h2
+            class="text-[#111418] tracking-tight text-[28px] font-extrabold leading-tight text-center pb-4"
+          >
+            Taking a breather?
+          </h2>
+          <!-- Descriptive Text -->
+          <div class="px-4 text-center mb-8">
+            <p class="text-[#4b5563] text-base font-medium leading-relaxed">
+              This is your
+              <span class="text-[#111418] font-bold">5th trade</span> in 20
+              minutes. High frequency can lead to unintended slippage and
+              emotional fatigue.
+            </p>
+          </div>
+          <!-- Action Buttons -->
+          <div class="flex w-full flex-col gap-3">
+              <!-- Primary: Wait (Recommended) -->
+              <button
+                class="flex h-14 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl bg-primary text-white text-base font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20"
+              onclick="window.location.href='main.html'"
+                >
+                <span class="material-symbols-outlined !text-xl">analytics</span>
+                <span>Review Portfolio Spread</span>
+              </button>
+              <!-- Secondary: Reduce Exposure -->
+              <button
+                class="flex h-14 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white text-base font-bold transition-transform active:scale-95"
+              >
+                <span class="material-symbols-outlined !text-xl"
+                  >timer</span
+                >
+                <span>Wait an hour</span>
+              </button>
+              <!-- Tertiary: Dismissal -->
+              <button
+                class="flex h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-transparent text-[#6b7280] dark:text-gray-500 text-sm font-medium leading-normal tracking-wide hover:text-[#111418] dark:hover:text-white"
+              >
+                <span>Continue anyway</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>

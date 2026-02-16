@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Onboarding: Risk &amp; Goals</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#ffffff",
+              "card-border": "#f1f1f1",
+              "selection-bg": "#f0f7ff",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary: #137fec;
+        --track-bg: #f1f1f1;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+        min-height: max(884px, 100dvh);
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: var(--primary);
+        cursor: pointer;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 6px;
+        background: var(--track-bg);
+        border-radius: 8px;
+        outline: none;
+      }
+      input[type="range"]::-webkit-slider-runnable-track {
+        background: var(--track-bg);
+        border-radius: 8px;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 flex justify-center">
+    <div
+      class="relative flex h-full min-h-screen w-full max-w-[430px] flex-col bg-white overflow-x-hidden shadow-2xl"
+    >
+      <header class="bg-white pt-6 px-4">
+        <div class="flex items-center justify-between mb-4">
+          <button
+            class="w-10 h-10 flex items-center justify-start text-black"
+            onclick="window.location.href = 'onboarding-1.html'"
+          >
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+          </button>
+          <h2
+            class="text-xs font-bold tracking-[0.1em] uppercase text-gray-500"
+          >
+            Step 2 of 4
+          </h2>
+          <div class="w-10"></div>
+        </div>
+        <div class="flex flex-col gap-2 mb-6 px-2">
+          <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+            <div
+              class="bg-primary h-full rounded-full transition-all duration-500"
+              style="width: 50%"
+            ></div>
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto px-4 pb-20">
+        <h2
+          class="text-[#111418] tracking-tight text-[28px] font-extrabold leading-tight pb-2 pt-4"
+        >
+          Tell us about your goals
+        </h2>
+        <p class="text-gray-500 text-base font-normal leading-normal pb-6">
+          This helps us tailor your investment strategy to your life milestones.
+        </p>
+        <section class="mb-8">
+          <h3
+            class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] pb-4"
+          >
+            What is your primary investment goal?
+          </h3>
+          <div class="flex flex-col gap-3">
+            <label
+              class="flex items-center justify-between p-4 rounded-xl border border-primary bg-selection-bg cursor-pointer transition-all"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm"
+                >
+                  <span class="material-symbols-outlined">elderly</span>
+                </div>
+                <div>
+                  <p class="font-bold text-[#111418]">Retirement</p>
+                  <p class="text-xs text-gray-500">Long-term wealth building</p>
+                </div>
+              </div>
+              <div
+                class="size-6 rounded-full border-2 border-primary flex items-center justify-center"
+              >
+                <div class="size-3 rounded-full bg-primary"></div>
+              </div>
+              <input checked="" class="hidden" name="goal" type="radio" />
+            </label>
+            <label
+              class="flex items-center justify-between p-4 rounded-xl border border-gray-200 bg-white cursor-pointer hover:border-primary/50 transition-all"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400"
+                >
+                  <span class="material-symbols-outlined">home</span>
+                </div>
+                <div>
+                  <p class="font-bold text-[#111418]">New House</p>
+                  <p class="text-xs text-gray-500">Saving for a down payment</p>
+                </div>
+              </div>
+              <div class="size-6 rounded-full border-2 border-gray-200"></div>
+              <input class="hidden" name="goal" type="radio" />
+            </label>
+            <label
+              class="flex items-center justify-between p-4 rounded-xl border border-gray-200 bg-white cursor-pointer hover:border-primary/50 transition-all"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400"
+                >
+                  <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div>
+                  <p class="font-bold text-[#111418]">Aggressive Growth</p>
+                  <p class="text-xs text-gray-500">
+                    Maximizing portfolio value
+                  </p>
+                </div>
+              </div>
+              <div class="size-6 rounded-full border-2 border-gray-200"></div>
+              <input class="hidden" name="goal" type="radio" />
+            </label>
+          </div>
+        </section>
+        <section class="mb-8">
+          <h3
+            class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] pb-4"
+          >
+            How much experience do you have?
+          </h3>
+          <div class="flex p-1 bg-gray-100 rounded-xl">
+            <button
+              class="flex-1 py-2.5 text-sm font-bold rounded-lg bg-white shadow-sm text-primary"
+            >
+              Beginner
+            </button>
+            <button class="flex-1 py-2.5 text-sm font-medium text-gray-500">
+              Intermediate
+            </button>
+            <button class="flex-1 py-2.5 text-sm font-medium text-gray-500">
+              Pro
+            </button>
+          </div>
+        </section>
+        <section class="mb-8">
+          <div class="flex items-center justify-between pb-4">
+            <h3
+              class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+            >
+              Your Risk Tolerance
+            </h3>
+            <div class="flex items-center text-primary text-sm font-bold">
+              <span class="material-symbols-outlined text-[18px] mr-1"
+                >info</span
+              >
+              Help me choose
+            </div>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+            <div
+              class="flex justify-between text-[10px] font-bold text-gray-400 mb-6 uppercase tracking-wider"
+            >
+              <span>Conservative</span>
+              <span>Moderate</span>
+              <span>Aggressive</span>
+            </div>
+            <input
+              class="w-full cursor-pointer accent-primary mb-4"
+              max="100"
+              min="1"
+              type="range"
+              value="45"
+            />
+            <div
+              class="mt-6 flex gap-4 items-start bg-white p-4 rounded-xl shadow-sm border border-gray-100"
+            >
+              <span class="material-symbols-outlined text-primary mt-0.5"
+                >verified_user</span
+              >
+              <div>
+                <p class="text-sm font-bold text-[#111418] mb-1">
+                  Moderate Risk Level
+                </p>
+                <p class="text-xs text-gray-500 leading-relaxed">
+                  A balanced approach aiming for steady growth with limited
+                  exposure to market volatility. Ideal for 5-10 year horizons.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-gray-100"
+      >
+        <button
+          class="w-full bg-primary hover:bg-primary/95 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/10"
+          onclick="window.location.href = 'onboarding-3.html'"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

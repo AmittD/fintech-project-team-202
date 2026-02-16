@@ -1,0 +1,345 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>My Strategies</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f8fafc",
+              "background-dark": "#0f172a",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              "2xl": "2rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        min-height: 100dvh;
+        font-family: "Manrope", sans-serif;
+      
+      }
+      .ios-safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+      <main class="flex-1 overflow-y-auto px-5 pt-6 pb-12">
+        <header class="mb-8 pt-3">
+          <h2
+            class="text-3xl font-extrabold text-slate-900 dark:text-white leading-tight"
+          >
+            My Strategies
+          </h2>
+        </header>
+        <button
+          class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98]" onclick="window.location.href='build-strategy.html'">
+          Build Strategy
+        </button>
+        <div class=" pt-6 pb-8 space-y-4">
+          <div class="flex items-center justify-between mb-2">
+            <h2
+              class="text-xs font-bold uppercase tracking-widest text-[#617589] dark:text-gray-500 px-1"
+            >
+              Active Running
+            </h2>
+          </div>
+          <div
+            class="bg-white dark:bg-[#1a242f] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="bg-primary/10 size-12 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-primary">bolt</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-base leading-tight">
+                  Moving Average Crossover
+                </h3>
+                <div class="flex items-center gap-1.5 mt-1">
+                  <span
+                    class="text-xs font-semibold px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300 uppercase tracking-tight"
+                    >BTC/USDT</span
+                  >
+                  <span
+                    class="size-1 bg-gray-300 dark:bg-gray-600 rounded-full"
+                  ></span>
+                  <span class="text-xs text-green-600 font-medium"
+                    >Live Now</span
+                  >
+                </div>
+              </div>
+              <div class="text-right">
+                <p class="text-green-600 text-lg font-bold leading-tight">
+                  +$1,240.50
+                </p>
+                <p class="text-[10px] text-gray-400 font-medium uppercase">
+                  +12.4% ROI
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex-1 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-[#111418] dark:text-white py-2.5 rounded-lg text-sm font-bold transition-colors"
+              >
+                Edit
+              </button>
+              <button
+                class="flex-[2] bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-bold transition-all shadow-md shadow-primary/20"
+              >
+                Performance Report
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-[#1a242f] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="bg-orange-500/10 size-12 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-orange-500"
+                  >query_stats</span
+                >
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-base leading-tight">
+                  RSI Scalper Pro
+                </h3>
+                <div class="flex items-center gap-1.5 mt-1">
+                  <span
+                    class="text-xs font-semibold px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300 uppercase tracking-tight"
+                    >ETH/USDT</span
+                  >
+                  <span
+                    class="size-1 bg-gray-300 dark:bg-gray-600 rounded-full"
+                  ></span>
+                  <span class="text-xs text-red-500 font-medium">Drawdown</span>
+                </div>
+              </div>
+              <div class="text-right">
+                <p class="text-red-500 text-lg font-bold leading-tight">
+                  -$45.20
+                </p>
+                <p class="text-[10px] text-gray-400 font-medium uppercase">
+                  -2.1% ROI
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex-1 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-[#111418] dark:text-white py-2.5 rounded-lg text-sm font-bold transition-colors"
+              >
+                Edit
+              </button>
+              <button
+                class="flex-[2] bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-bold transition-all shadow-md shadow-primary/20"
+              >
+                Performance Report
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <button
+              class="flex items-center gap-1 text-sm font-semibold text-[#617589]"
+            >
+              <span class="material-symbols-outlined text-[18px]"
+                >keyboard_arrow_down</span
+              >
+              Show All
+            </button>
+          </div>
+          <div class="flex items-center justify-between pt-6 mb-2">
+            <h2
+              class="text-xs font-bold uppercase tracking-widest text-[#617589] dark:text-gray-500 px-1"
+            >
+              Saved Drafts
+            </h2>
+          </div>
+          <div
+            class="bg-white dark:bg-[#1a242f] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="bg-gray-100 dark:bg-gray-800 size-12 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-gray-500"
+                  >grid_view</span
+                >
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-base leading-tight">
+                  MACD Trend Follower
+                </h3>
+                <div class="flex items-center gap-1.5 mt-1">
+                  <span
+                    class="text-xs font-semibold px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300 uppercase tracking-tight"
+                    >SOL/USDT</span
+                  >
+                  <span
+                    class="size-1 bg-gray-300 dark:bg-gray-600 rounded-full"
+                  ></span>
+                  <span class="text-xs text-gray-400 font-medium italic"
+                    >Backtest: 68% Win</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex-1 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-[#111418] dark:text-white py-2.5 rounded-lg text-sm font-bold transition-colors"
+              >
+                Edit
+              </button>
+              <button
+                class="flex-[2] bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-bold transition-all shadow-md shadow-primary/20"
+              >
+                Run Live Market
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-[#1a242f] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="bg-gray-100 dark:bg-gray-800 size-12 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-gray-500"
+                  >auto_awesome</span
+                >
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-base leading-tight">
+                  Mean Reversion Alpha
+                </h3>
+                <div class="flex items-center gap-1.5 mt-1">
+                  <span
+                    class="text-xs font-semibold px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300 uppercase tracking-tight"
+                    >LINK/USDT</span
+                  >
+                  <span
+                    class="size-1 bg-gray-300 dark:bg-gray-600 rounded-full"
+                  ></span>
+                  <span class="text-xs text-gray-400 font-medium italic"
+                    >Un-tested</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex-1 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-[#111418] dark:text-white py-2.5 rounded-lg text-sm font-bold transition-colors"
+              >
+                Edit
+              </button>
+              <button
+                class="flex-[2] bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-bold transition-all shadow-md shadow-primary/20"
+              >
+                Run Live Market
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <button
+              class="flex items-center gap-1 text-sm font-semibold text-[#617589]"
+            >
+              <span class="material-symbols-outlined text-[18px]"
+                >keyboard_arrow_down</span
+              >
+              Show All
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <nav
+      class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-2xl border-t border-gray-100 flex justify-around items-center pt-3 pb-4 px-2 z-50"
+    >
+      <button
+        class="flex flex-col items-center gap-1 group"
+        onclick="window.location.href = 'main.html'"
+      >
+        <span
+          class="material-symbols-outlined text-gray-400 group-active:text-primary"
+          >home</span
+        >
+        <span class="text-[10px] font-bold text-gray-400">Home</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 group"
+        onclick="window.location.href = 'portfolio.html'"
+      >
+        <span class="material-symbols-outlined text-gray-400">bar_chart</span>
+        <span class="text-[10px] font-bold text-gray-400">Portfolio</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 group"
+        onclick="window.location.href = 'watchlist.html'"
+      >
+        <span
+          class="material-symbols-outlined text-gray-400 group-active:text-primary"
+          >candlestick_chart</span
+        >
+        <span class="text-[10px] font-bold text-gray-400">Watchlist</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 group"
+        onclick="window.location.href = 'strategies.html'"
+      >
+        <span
+          class="material-symbols-outlined text-primary group-active:text-primary"
+          >layers</span
+        >
+        <span class="text-[10px] font-bold text-primary">Strategies</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 group"
+        onclick="window.location.href = 'reports.html'"
+      >
+        <span
+          class="material-symbols-outlined text-gray-400 group-active:text-primary"
+          >description</span
+        >
+        <span
+          class="text-[10px] font-bold text-gray-400"
+          onclick="window.location.href = 'reports.html'"
+          >Reports</span
+        >
+      </button>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Behavioral Alert - FOMO Intervention</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "warning-soft": "#fff9e6",
+              "warning-border": "#fcebb6",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <!-- Screen Container (iOS Phone Ratio Mockup) -->
+    <div class="relative flex min-h-screen w-full flex-col">
+      <div
+        class="fixed inset-0 z-10 bg-black/40 backdrop-blur-[2px] flex flex-col justify-end sm:justify-center items-center"
+      >
+        <!-- Modal Container (iOS Bottom Sheet Style) -->
+        <div
+          class="relative w-full max-w-md bg-white dark:bg-[#1c1c1e] rounded-t-xl sm:rounded-xl overflow-hidden shadow-2xl animate-in slide-in-from-bottom duration-300"
+        >
+          <!-- BottomSheetHandle -->
+          <div class="flex h-6 w-full items-center justify-center">
+            <div
+              class="h-1 w-9 rounded-full bg-gray-200 dark:bg-gray-700"
+            ></div>
+          </div>
+          <!-- Content Wrapper -->
+          <div class="px-6 pt-2 pb-8 flex flex-col items-center text-center">
+            <!-- Soft Warning Icon Container -->
+            <div
+              class="mb-6 mt-4 flex h-20 w-20 items-center justify-center rounded-full bg-warning-soft dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400"
+            >
+              <span
+                class="material-symbols-outlined !text-5xl"
+                style="
+                  font-variation-settings:
+                    &quot;FILL&quot; 0,
+                    &quot;wght&quot; 300,
+                    &quot;GRAD&quot; 0,
+                    &quot;opsz&quot; 48;
+                "
+              >
+                psychology_alt
+              </span>
+            </div>
+            <!-- HeadlineText -->
+            <h2
+              class="text-[#111418] dark:text-white tracking-tight text-[26px] font-bold leading-tight pb-3"
+            >
+              Wait, this looks like FOMO
+            </h2>
+            <!-- BodyText -->
+            <p
+              class="text-[#4f5b6b] dark:text-gray-400 text-base font-normal leading-relaxed pb-8 max-w-[320px]"
+            >
+              Our AI detected signs of impulsive trading behavior. Trading on
+              'Fear Of Missing Out' often leads to losses. Take a breath.
+            </p>
+            <!-- Behavioral Stats/Indicator (Custom Component) -->
+            <div class="mb-8 w-full flex justify-center gap-4">
+              <div
+                class="flex flex-col items-center p-3 rounded-lg border border-warning-border bg-warning-soft/50 dark:border-yellow-900/30 dark:bg-yellow-900/10"
+              >
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold text-yellow-700 dark:text-yellow-500"
+                  >Signal</span
+                >
+                <span
+                  class="text-sm font-semibold text-yellow-800 dark:text-yellow-400"
+                  >Rapid Input</span
+                >
+              </div>
+              <div
+                class="flex flex-col items-center p-3 rounded-lg border border-warning-border bg-warning-soft/50 dark:border-yellow-900/30 dark:bg-yellow-900/10"
+              >
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold text-yellow-700 dark:text-yellow-500"
+                  >Trend</span
+                >
+                <span
+                  class="text-sm font-semibold text-yellow-800 dark:text-yellow-400"
+                  >Parabolic Run</span
+                >
+              </div>
+            </div>
+            <!-- ButtonGroup -->
+            <div class="flex w-full flex-col gap-3">
+              <!-- Primary: Wait (Recommended) -->
+              <button
+                class="flex h-14 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl bg-primary text-white text-base font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20"
+                onclick="window.location.href = 'breather.html'"
+              >
+                <span class="material-symbols-outlined !text-xl">timer</span>
+                <span>Wait 10 Minutes</span>
+              </button>
+              <!-- Secondary: Reduce Exposure -->
+              <button
+                class="flex h-14 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white text-base font-bold transition-transform active:scale-95"
+              >
+                <span class="material-symbols-outlined !text-xl"
+                  >shield_with_heart</span
+                >
+                <span>Reduce Position Size</span>
+              </button>
+              <!-- Tertiary: Dismissal -->
+              <button
+                class="flex h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-transparent text-[#6b7280] dark:text-gray-500 text-sm font-medium leading-normal tracking-wide hover:text-[#111418] dark:hover:text-white"
+              >
+                <span>Continue anyway</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

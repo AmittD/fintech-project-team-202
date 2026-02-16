@@ -1,0 +1,365 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Advanced Trade Execution - AI Insights</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .long-options,
+      .short-options {
+        display: none;
+      }
+      #long-radio:checked ~ .long-options {
+        display: flex;
+      }
+      #short-radio:checked ~ .short-options {
+        display: flex;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen flex justify-center"
+  >
+    <div
+      class="relative flex h-full min-h-screen w-full max-w-[480px] flex-col bg-white dark:bg-background-dark overflow-x-hidden shadow-2xl"
+    >
+      <div
+        class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10"
+      >
+        <div
+          class="text-[#111418] dark:text-white flex size-12 shrink-0 items-center cursor-pointer"
+          onclick="window.location.href = 'apple.html'"
+        >
+          <span class="material-symbols-outlined">arrow_back_ios</span>
+        </div>
+        <h2
+          class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
+        >
+          Place Trade
+        </h2>
+        <div class="flex w-12 items-center justify-end">
+          <button
+            class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-[#111418] dark:text-white gap-2 text-base font-bold leading-normal min-w-0 p-0"
+          >
+            <span class="material-symbols-outlined">info</span>
+          </button>
+        </div>
+      </div>
+      <div class="px-4 py-2">
+        <div
+          class="flex h-11 items-center justify-center rounded-xl bg-[#f0f2f4] dark:bg-gray-800 p-1 relative"
+        >
+          <input
+            checked=""
+            class="peer/long hidden"
+            id="long-radio"
+            name="position-type"
+            type="radio"
+          />
+          <input
+            class="peer/short hidden"
+            id="short-radio"
+            name="position-type"
+            type="radio"
+          />
+          <label
+            class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-[#617589] dark:text-gray-400 text-sm font-bold leading-normal transition-all peer-checked/long:bg-white peer-checked/long:text-primary peer-checked/long:shadow-sm dark:peer-checked/long:bg-gray-700 dark:peer-checked/long:text-white"
+            for="long-radio"
+          >
+            <span>Long</span>
+          </label>
+          <label
+            class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-[#617589] dark:text-gray-400 text-sm font-bold leading-normal transition-all peer-checked/short:bg-white peer-checked/short:text-red-500 peer-checked/short:shadow-sm dark:peer-checked/short:bg-gray-700 dark:peer-checked/short:text-white"
+            for="short-radio"
+          >
+            <span>Short</span>
+          </label>
+          <div
+            class="long-options absolute -bottom-14 left-0 w-full flex gap-3 px-0"
+          >
+            <label class="flex-1">
+              <input
+                checked=""
+                class="peer hidden"
+                name="exec-action"
+                type="radio"
+              />
+              <div
+                class="flex h-10 items-center justify-center rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-bold text-[#617589] peer-checked:bg-primary/10 peer-checked:border-primary peer-checked:text-primary transition-all cursor-pointer"
+              >
+                Buy
+              </div>
+            </label>
+            <label class="flex-1">
+              <input class="peer hidden" name="exec-action" type="radio" />
+              <div
+                class="flex h-10 items-center justify-center rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-bold text-[#617589] peer-checked:bg-red-50 peer-checked:border-red-500 peer-checked:text-red-600 transition-all cursor-pointer"
+              >
+                Sell
+              </div>
+            </label>
+          </div>
+          <div
+            class="short-options absolute -bottom-14 left-0 w-full flex gap-3 px-0"
+          >
+            <label class="flex-1">
+              <input
+                class="peer hidden"
+                name="exec-action-short"
+                type="radio"
+              />
+              <div
+                class="flex h-10 items-center justify-center rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-bold text-[#617589] peer-checked:bg-red-50 peer-checked:border-red-500 peer-checked:text-red-600 transition-all cursor-pointer"
+              >
+                Sell Short
+              </div>
+            </label>
+            <label class="flex-1">
+              <input
+                checked=""
+                class="peer hidden"
+                name="exec-action-short"
+                type="radio"
+              />
+              <div
+                class="flex h-10 items-center justify-center rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-bold text-[#617589] peer-checked:bg-primary/10 peer-checked:border-primary peer-checked:text-primary transition-all cursor-pointer"
+              >
+                Buy to Cover
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-center pt-16 pb-2">
+        <div class="flex items-center gap-2 mb-1">
+          <div
+            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-primary text-xl"
+              >rocket_launch</span
+            >
+          </div>
+          <span class="text-sm font-bold text-[#617589] dark:text-gray-400"
+            >AAPL · Apple Inc.</span
+          >
+        </div>
+        <h1
+          class="text-[#111418] dark:text-white tracking-tight text-[42px] font-bold leading-tight px-4 text-center"
+        >
+          $189.42
+        </h1>
+        <p class="text-green-500 text-sm font-bold">+1.24% Today</p>
+      </div>
+      <p
+        class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal pb-6 px-4 text-center"
+      >
+        Available: $12,450.00
+      </p>
+      <div class="px-4 space-y-4">
+        <div class="flex flex-col">
+          <p
+            class="text-[#111418] dark:text-white text-base font-bold leading-normal pb-2"
+          >
+            Amount
+          </p>
+          <div class="relative">
+            <input
+              class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 h-14 p-[15px] text-xl font-bold leading-normal placeholder:text-[#617589]"
+              placeholder="0.00"
+              type="number"
+            />
+            <div
+              class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2"
+            >
+              <span class="text-sm font-bold text-[#617589]">USD</span>
+              <span class="material-symbols-outlined text-[#617589] text-sm"
+                >unfold_more</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <p
+            class="text-[#111418] dark:text-white text-base font-bold leading-normal pb-2"
+          >
+            Order Type
+          </p>
+          <div class="relative">
+            <select
+              class="appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 h-14 p-[15px] text-base font-medium leading-normal"
+            >
+              <option value="market">Market Order</option>
+              <option value="limit">Limit Order</option>
+            </select>
+            <div
+              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            >
+              <span class="material-symbols-outlined text-[#617589]"
+                >keyboard_arrow_down</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-950 dark:to-blue-900/40 rounded-2xl p-4 border border-indigo-100 dark:border-indigo-800 shadow-sm"
+        >
+          <div class="flex items-start gap-3">
+            <div
+              class="size-10 shrink-0 rounded-full bg-white dark:bg-indigo-800 flex items-center justify-center shadow-sm"
+            >
+              <span
+                class="material-symbols-outlined text-indigo-600 dark:text-indigo-300"
+                >psychology_alt</span
+              >
+            </div>
+            <div>
+              <h4
+                class="text-indigo-900 dark:text-indigo-100 font-bold text-sm mb-1"
+              >
+                AI Behavioral Insight
+              </h4>
+              <p
+                class="text-indigo-800/80 dark:text-indigo-200/80 text-sm leading-snug"
+              >
+                You are trading 15% above your typical volume today. Are you
+                acting on a signal or impulse?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-4 py-6">
+        <div
+          class="bg-primary/5 dark:bg-primary/10 rounded-xl p-4 border border-primary/10"
+        >
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary"
+                >analytics</span
+              >
+              <span class="text-sm font-bold text-[#111418] dark:text-white"
+                >AI Risk Score</span
+              >
+            </div>
+            <div
+              class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full"
+            >
+              Low Risk
+            </div>
+          </div>
+          <div class="flex items-end gap-3 mb-4">
+            <span class="text-4xl font-bold text-primary">24</span>
+            <span
+              class="text-sm font-medium text-[#617589] dark:text-gray-400 pb-1"
+              >/ 100</span
+            >
+            <div
+              class="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full mb-2 overflow-hidden"
+            >
+              <div class="h-full bg-primary w-[24%] rounded-full"></div>
+            </div>
+          </div>
+          <div class="border-t border-primary/10 pt-4">
+            <p
+              class="text-xs font-medium text-[#111418] dark:text-gray-300 mb-2"
+            >
+              Portfolio Impact Preview
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col">
+                <span
+                  class="text-[10px] uppercase tracking-wider text-[#617589]"
+                  >Diversification</span
+                >
+                <span class="text-sm font-bold text-green-600">+4.2%</span>
+              </div>
+              <div class="h-8 w-[1px] bg-primary/10"></div>
+              <div class="flex flex-col text-right">
+                <span
+                  class="text-[10px] uppercase tracking-wider text-[#617589]"
+                  >Tech Exposure</span
+                >
+                <span class="text-sm font-bold text-[#111418] dark:text-white"
+                  >25.0% → 26.2%</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <p
+          class="text-[11px] text-[#617589] dark:text-gray-500 mt-3 px-1 text-center"
+        >
+          * Based on your current "Balanced" profile and emotion-aware analysis.
+        </p>
+      </div>
+      <div
+        class="mt-auto p-4 pb-10 bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800"
+      >
+        <div class="flex justify-between items-center mb-4 px-2">
+          <span class="text-sm font-medium text-[#617589] dark:text-gray-400"
+            >Total Estimate</span
+          >
+          <span class="text-lg font-bold text-[#111418] dark:text-white"
+            >$0.00</span
+          >
+        </div>
+        <button
+          class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98]"
+          onclick="window.location.href = 'fomo.html'"
+        >
+          Send Order
+        </button>
+        <p
+          class="text-center text-[10px] text-[#617589] dark:text-gray-500 mt-4 leading-relaxed"
+        >
+          By tapping Send Order, you agree to our Terms of Service. Trading
+          involves risk. AI scores are estimates and not financial advice.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

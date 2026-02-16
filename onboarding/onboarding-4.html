@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bank Connection Success</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "ios-blue": "#007AFF",
+              "ios-green": "#34C759",
+              "card-grey": "#F9FAFB",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        .material-symbols-outlined {
+          font-variation-settings:
+            "FILL" 1,
+            "wght" 400,
+            "GRAD" 0,
+            "opsz" 24;
+        }
+        body {
+          min-height: 100dvh;
+        }
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-white font-display text-slate-900">
+    <div
+      class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-[430px] mx-auto bg-white"
+    >
+      <header class="bg-white pt-6 px-4">
+        <div class="flex items-center justify-between mb-4">
+          <button
+            class="w-10 h-10 flex items-center justify-start text-black"
+            onclick="window.location.href = 'onboarding-3.html'"
+          >
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+          </button>
+          <h2
+            class="text-xs font-bold tracking-[0.1em] uppercase text-gray-500"
+          >
+            Step 3 of 4
+          </h2>
+          <div class="w-10"></div>
+        </div>
+        <div class="flex flex-col gap-2 mb-6 px-2">
+          <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+            <div
+              class="bg-primary h-full rounded-full transition-all duration-500"
+              style="width: 75%"
+            ></div>
+          </div>
+        </div>
+      </header>
+      <div
+        class="flex flex-col items-center justify-center flex-1 px-8 text-center pb-12"
+      >
+        <div class="relative mb-10">
+          <div
+            class="size-32 rounded-full bg-emerald-50 flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-[84px] text-ios-green"
+              >check_circle</span
+            >
+          </div>
+          <div
+            class="absolute -bottom-2 -right-2 size-12 rounded-full bg-blue-50 border-4 border-white flex items-center justify-center shadow-sm"
+          >
+            <span class="material-symbols-outlined text-ios-blue text-[24px]"
+              >shield</span
+            >
+          </div>
+        </div>
+        <h1
+          class="text-slate-900 tracking-tight text-[32px] font-extrabold leading-tight mb-4"
+        >
+          Successfully Connected
+        </h1>
+        <div class="space-y-4 max-w-sm">
+          <p class="text-slate-600 text-[16px] leading-relaxed">
+            Your data is secure and will only be used for viewing and behavioral
+            learning purposes.
+          </p>
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+            <p class="text-slate-500 text-[14px] leading-relaxed">
+              <span class="font-bold text-slate-700">ClearTrade</span> cannot
+              move funds or execute trades from your bank account.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 pb-12">
+        <div class="flex flex-col gap-6 items-center mb-8">
+          <div class="flex gap-4">
+            <div
+              class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-100 rounded-full shadow-sm"
+            >
+              <span class="material-symbols-outlined text-[16px] text-ios-green"
+                >verified</span
+              >
+              <span
+                class="text-[10px] font-bold uppercase tracking-wider text-slate-600"
+                >Bank-Grade Security</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-100 rounded-full shadow-sm"
+            >
+              <span class="material-symbols-outlined text-[16px] text-ios-blue"
+                >visibility</span
+              >
+              <span
+                class="text-[10px] font-bold uppercase tracking-wider text-slate-600"
+                >Read-Only</span
+              >
+            </div>
+          </div>
+        </div>
+        <button
+          class="w-full py-4 bg-ios-blue hover:bg-blue-600 text-white rounded-xl font-bold text-base transition-all active:scale-[0.98] shadow-lg shadow-blue-500/20"
+          onclick="window.location.href = 'onboarding-finish.html'"
+        >
+          Go to Final Step
+        </button>
+        <p class="text-center mt-6 text-[12px] text-slate-400 font-medium">
+          Connection managed by secure encryption protocols.
+        </p>
+      </div>
+      <div class="h-6 w-full bg-white"></div>
+    </div>
+  </body>
+</html>

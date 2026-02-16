@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Step 3: Secure Bank Connect</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "ios-blue": "#007AFF",
+              "card-grey": "#F9FAFB",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        .material-symbols-outlined {
+          font-variation-settings:
+            "FILL" 0,
+            "wght" 400,
+            "GRAD" 0,
+            "opsz" 24;
+        }
+        .ios-toggle:checked ~ .toggle-bg {
+          background-color: #34c759;
+        }
+        .ios-toggle:checked ~ .toggle-dot {
+          transform: translateX(1.25rem);
+        }
+        body {
+          min-height: 100dvh;
+        }
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-white font-display text-slate-900">
+    <div
+      class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-[430px] mx-auto bg-white border-x border-slate-50"
+    >
+      <header class="bg-white pt-6 px-4">
+        <div class="flex items-center justify-between mb-4">
+          <button
+            class="w-10 h-10 flex items-center justify-start text-black"
+            onclick="window.location.href = 'onboarding-2.html'"
+          >
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+          </button>
+          <h2
+            class="text-xs font-bold tracking-[0.1em] uppercase text-gray-500"
+          >
+            Step 3 of 4
+          </h2>
+          <div class="w-10"></div>
+        </div>
+        <div class="flex flex-col gap-2 mb-6 px-2">
+          <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+            <div
+              class="bg-primary h-full rounded-full transition-all duration-500"
+              style="width: 75%"
+            ></div>
+          </div>
+        </div>
+      </header>
+      <div class="px-6 pt-4 pb-6">
+        <h1
+          class="text-slate-900 tracking-tight text-[32px] font-extrabold leading-tight"
+        >
+          Secure your insights
+        </h1>
+        <p class="text-slate-500 mt-2 text-base leading-relaxed">
+          Linking your account via Open Banking allows our AI to personalize
+          your risk analysis and behavioral insights.
+        </p>
+      </div>
+      <div class="px-6 mb-6">
+        <div
+          class="flex flex-col rounded-[24px] overflow-hidden bg-card-grey border border-slate-100 shadow-sm"
+        >
+          <div
+            class="w-full bg-slate-50 flex flex-col items-center justify-center py-10 gap-6 border-b border-slate-100"
+          >
+            <div class="flex items-center justify-center gap-4 relative">
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="size-14 rounded-2xl bg-white shadow-sm flex items-center justify-center border border-slate-100"
+                >
+                  <span
+                    class="material-symbols-outlined text-slate-400 text-2xl"
+                    >person</span
+                  >
+                </div>
+                <span
+                  class="text-[10px] font-bold text-slate-400 uppercase tracking-widest"
+                  >User</span
+                >
+              </div>
+              <div class="flex items-center text-slate-300">
+                <span class="material-symbols-outlined">trending_flat</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 relative">
+                <div
+                  class="size-16 rounded-full bg-white shadow-md flex items-center justify-center border border-slate-100 ring-4 ring-ios-blue/5"
+                >
+                  <span class="material-symbols-outlined text-ios-blue text-3xl"
+                    >account_balance</span
+                  >
+                </div>
+                <span
+                  class="text-[10px] font-bold text-ios-blue uppercase tracking-widest"
+                  >Bank</span
+                >
+                <div
+                  class="absolute -top-1 -right-1 bg-white px-1.5 py-0.5 rounded border border-slate-100 shadow-sm"
+                >
+                  <span class="text-[8px] font-black text-slate-400"
+                    >PLAID</span
+                  >
+                </div>
+              </div>
+              <div class="flex items-center text-slate-300">
+                <span class="material-symbols-outlined">trending_flat</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="size-14 rounded-2xl bg-white shadow-sm flex items-center justify-center border border-slate-100"
+                >
+                  <span
+                    class="material-symbols-outlined text-slate-400 text-2xl"
+                    >smart_toy</span
+                  >
+                </div>
+                <span
+                  class="text-[10px] font-bold text-slate-400 uppercase tracking-widest"
+                  >App</span
+                >
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <span
+                class="inline-flex items-center px-3 py-1.5 rounded-full text-[10px] font-bold bg-white text-slate-600 border border-slate-200 uppercase tracking-wider shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-[14px] mr-1.5 text-emerald-500"
+                  >lock</span
+                >
+                Bank-grade Security
+              </span>
+              <span
+                class="inline-flex items-center px-3 py-1.5 rounded-full text-[10px] font-bold bg-white text-slate-600 border border-slate-200 uppercase tracking-wider shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-[14px] mr-1.5 text-ios-blue"
+                  >visibility</span
+                >
+                Read-only Access
+              </span>
+            </div>
+          </div>
+          <div class="flex flex-col p-6 gap-6 bg-white">
+            <div>
+              <p class="text-slate-900 text-xl font-bold tracking-tight mb-2">
+                Connect your Bank
+              </p>
+              <p class="text-slate-600 text-[15px] leading-relaxed">
+                Secure, read-only connection via Plaid. No manual data entry
+                required.
+              </p>
+            </div>
+            <ul class="space-y-3.5">
+              <li class="flex items-start gap-3 text-slate-600">
+                <span
+                  class="material-symbols-outlined text-emerald-500 text-[20px] mt-0.5"
+                  >verified_user</span
+                >
+                <span class="text-[14px] font-medium"
+                  >Read-only access (we cannot move money)</span
+                >
+              </li>
+              <li class="flex items-start gap-3 text-slate-600">
+                <span
+                  class="material-symbols-outlined text-ios-blue text-[20px] mt-0.5"
+                  >encrypted</span
+                >
+                <span class="text-[14px] font-medium"
+                  >Bank-grade AES-256 encryption</span
+                >
+              </li>
+              <li class="flex items-start gap-3 text-slate-600">
+                <span
+                  class="material-symbols-outlined text-ios-blue text-[20px] mt-0.5"
+                  >bolt</span
+                >
+                <span class="text-[14px] font-medium"
+                  >No manual entry required</span
+                >
+              </li>
+            </ul>
+            <div class="space-y-3">
+              <button
+                class="w-full py-4 bg-ios-blue hover:bg-blue-600 text-white rounded-xl font-bold text-base transition-all active:scale-[0.98] flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
+                onclick="window.location.href = 'onboarding-4.html'"
+              >
+                Connect Securely
+              </button>
+              <p class="text-center text-[11px] text-slate-400 font-medium">
+                Redirects to your official bank login.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 space-y-3 mb-8">
+        <h3
+          class="text-[11px] font-extrabold uppercase tracking-[0.12em] text-slate-400 mb-3 ml-1"
+        >
+          Permissions Summary
+        </h3>
+        <label
+          class="flex items-center justify-between p-4 bg-white rounded-2xl border border-slate-100 cursor-pointer active:bg-slate-50 transition-colors"
+        >
+          <div class="flex flex-col gap-0.5 flex-1 pr-4">
+            <span class="text-slate-900 font-bold text-[15px]"
+              >Read-only Data</span
+            >
+            <span class="text-slate-500 text-xs"
+              >View balances &amp; transaction history</span
+            >
+          </div>
+          <div
+            class="relative inline-block w-12 h-7 align-middle select-none transition duration-200 ease-in"
+          >
+            <input
+              checked=""
+              class="ios-toggle absolute block w-0 h-0 opacity-0"
+              disabled=""
+              type="checkbox"
+            />
+            <div
+              class="toggle-bg block w-full h-full rounded-full bg-slate-200 transition duration-200"
+            ></div>
+            <div
+              class="toggle-dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition-transform duration-200 shadow-md"
+            ></div>
+          </div>
+        </label>
+        <label
+          class="flex items-center justify-between p-4 bg-white rounded-2xl border border-slate-100 cursor-pointer active:bg-slate-50 transition-colors"
+        >
+          <div class="flex flex-col gap-0.5 flex-1 pr-4">
+            <span class="text-slate-900 font-bold text-[15px]"
+              >AI Behavioral Insights</span
+            >
+            <span class="text-slate-500 text-xs"
+              >Personalized risk analysis engine</span
+            >
+          </div>
+          <div
+            class="relative inline-block w-12 h-7 align-middle select-none transition duration-200 ease-in"
+          >
+            <input
+              checked=""
+              class="ios-toggle absolute block w-0 h-0 opacity-0 cursor-pointer"
+              type="checkbox"
+            />
+            <div
+              class="toggle-bg block w-full h-full rounded-full bg-slate-200 transition duration-200"
+            ></div>
+            <div
+              class="toggle-dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition-transform duration-200 shadow-md"
+            ></div>
+          </div>
+        </label>
+      </div>
+      <div class="mt-auto px-6 pb-8 border-t border-slate-50 pt-8">
+        <div class="flex justify-center gap-10 items-center mb-8">
+          <div class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined text-[18px]">gpp_good</span>
+            <span
+              class="text-[9px] font-bold uppercase tracking-widest text-center"
+              >FCA<br />Regulated</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+            <span
+              class="text-[9px] font-bold uppercase tracking-widest text-center"
+              >SOC2<br />Compliant</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined text-[18px]">policy</span>
+            <span
+              class="text-[9px] font-bold uppercase tracking-widest text-center"
+              >Privacy<br />First</span
+            >
+          </div>
+        </div>
+        <p class="text-center text-[11px] text-slate-400 leading-relaxed px-4">
+          By connecting, you agree to our
+          <a class="underline text-slate-600 font-semibold" href="#"
+            >Security Policy</a
+          >
+          and
+          <a class="underline text-slate-600 font-semibold" href="#"
+            >Terms of Service</a
+          >. Your credentials are never seen by us.
+        </p>
+      </div>
+      <div class="h-8 w-full bg-white"></div>
+    </div>
+  </body>
+</html>

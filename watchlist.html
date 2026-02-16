@@ -1,0 +1,365 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Asset Watchlist &amp; Search | ClearTrade</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .sparkline {
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <main class="px-5 pt-6 pb-6">
+      <header class="pt-3">
+        <div
+          class="flex items-center justify-between px-3 dark:border-gray-800 mb-2"
+        >
+          <h2
+            class="text-3xl font-extrabold text-slate-900 dark:text-white leading-tight"
+          >
+            My Watchlist
+          </h2>
+          <button class="text-primary text-sm font-semibold">Edit</button>
+        </div>
+      </header>
+
+      <!-- Search Bar -->
+      <div class="px-3 py-3 top-[108px] z-10 dark:bg-background-dark">
+        <label class="flex flex-col w-full">
+          <div
+            class="flex w-full items-stretch rounded-xl h-11 bg-gray-100 dark:bg-gray-800"
+            onClick="window.location.href = 'search.html'"
+          >
+            <div class="text-[#617589] flex items-center justify-center pl-4">
+              <span class="material-symbols-outlined text-xl">search</span>
+            </div>
+            <input
+              class="form-input flex w-full border-none bg-transparent focus:outline-0 focus:ring-0 h-full placeholder:text-gray-500 text-[#111418] dark:text-white px-2 text-base font-normal"
+              placeholder="Search symbols or companies"
+              type="text"
+            />
+          </div>
+        </label>
+      </div>
+      <main class="flex-1">
+        <!-- Section Header -->
+
+        <!-- Asset Cards List -->
+        <div
+          class="flex flex-col divide-y divide-gray-100 rounded-xl bg-white px-4 m-2 border-t border-gray-100 dark:divide-gray-800"
+        >
+          <!-- AAPL Card -->
+          <div class="flex items-center gap-4 py-4 justify-between group">
+            <div class="flex flex-col">
+              <p
+                class="text-[#111418] dark:text-white text-lg font-bold leading-tight"
+              >
+                AAPL
+              </p>
+              <p class="text-[#617589] text-xs font-medium">Apple Inc.</p>
+            </div>
+            <div class="flex-1 flex justify-center px-4 h-8">
+              <!-- Simple Sparkline SVG -->
+              <svg
+                class="sparkline w-full h-full max-w-[80px]"
+                viewbox="0 0 100 30"
+              >
+                <path
+                  class="stroke-green-500"
+                  d="M0,20 L20,18 L40,25 L60,10 L80,12 L100,5"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex flex-col items-end gap-1">
+              <p class="text-[#111418] dark:text-white text-base font-bold">
+                $189.42
+              </p>
+              <div
+                class="bg-green-500 text-white text-[13px] font-bold px-2 py-0.5 rounded-md min-w-[64px] text-center"
+              >
+                +1.24%
+              </div>
+            </div>
+          </div>
+          <!-- TSLA Card -->
+          <div class="flex items-center gap-4 py-4 justify-between group">
+            <div class="flex flex-col">
+              <p
+                class="text-[#111418] dark:text-white text-lg font-bold leading-tight"
+              >
+                TSLA
+              </p>
+              <p class="text-[#617589] text-xs font-medium">Tesla, Inc.</p>
+            </div>
+            <div class="flex-1 flex justify-center px-4 h-8">
+              <svg
+                class="sparkline w-full h-full max-w-[80px]"
+                viewbox="0 0 100 30"
+              >
+                <path
+                  class="stroke-red-500"
+                  d="M0,5 L20,12 L40,8 L60,22 L80,18 L100,28"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex flex-col items-end gap-1">
+              <p class="text-[#111418] dark:text-white text-base font-bold">
+                $175.34
+              </p>
+              <div
+                class="bg-red-500 text-white text-[13px] font-bold px-2 py-0.5 rounded-md min-w-[64px] text-center"
+              >
+                -2.15%
+              </div>
+            </div>
+          </div>
+          <!-- BTC Card -->
+          <div class="flex items-center gap-4 py-4 justify-between group">
+            <div class="flex flex-col">
+              <p
+                class="text-[#111418] dark:text-white text-lg font-bold leading-tight"
+              >
+                BTC
+              </p>
+              <p class="text-[#617589] text-xs font-medium">Bitcoin</p>
+            </div>
+            <div class="flex-1 flex justify-center px-4 h-8">
+              <svg
+                class="sparkline w-full h-full max-w-[80px]"
+                viewbox="0 0 100 30"
+              >
+                <path
+                  class="stroke-green-500"
+                  d="M0,25 L20,20 L40,22 L60,10 L80,5 L100,2"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex flex-col items-end gap-1">
+              <p class="text-[#111418] dark:text-white text-base font-bold">
+                $64,210.50
+              </p>
+              <div
+                class="bg-green-500 text-white text-[13px] font-bold px-2 py-0.5 rounded-md min-w-[64px] text-center"
+              >
+                +4.82%
+              </div>
+            </div>
+          </div>
+          <!-- NVDA Card -->
+          <div class="flex items-center gap-4 py-4 justify-between group">
+            <div class="flex flex-col">
+              <p
+                class="text-[#111418] dark:text-white text-lg font-bold leading-tight"
+              >
+                NVDA
+              </p>
+              <p class="text-[#617589] text-xs font-medium">NVIDIA Corp.</p>
+            </div>
+            <div class="flex-1 flex justify-center px-4 h-8">
+              <svg
+                class="sparkline w-full h-full max-w-[80px]"
+                viewbox="0 0 100 30"
+              >
+                <path
+                  class="stroke-green-500"
+                  d="M0,15 L20,18 L40,15 L60,12 L80,8 L100,5"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex flex-col items-end gap-1">
+              <p class="text-[#111418] dark:text-white text-base font-bold">
+                $822.79
+              </p>
+              <div
+                class="bg-green-500 text-white text-[13px] font-bold px-2 py-0.5 rounded-md min-w-[64px] text-center"
+              >
+                +0.75%
+              </div>
+            </div>
+          </div>
+          <!-- MSFT Card -->
+          <div class="flex items-center gap-4 py-4 justify-between group">
+            <div class="flex flex-col">
+              <p
+                class="text-[#111418] dark:text-white text-lg font-bold leading-tight"
+              >
+                MSFT
+              </p>
+              <p class="text-[#617589] text-xs font-medium">Microsoft Corp.</p>
+            </div>
+            <div class="flex-1 flex justify-center px-4 h-8">
+              <svg
+                class="sparkline w-full h-full max-w-[80px]"
+                viewbox="0 0 100 30"
+              >
+                <path
+                  class="stroke-gray-400"
+                  d="M0,15 L20,14 L40,16 L60,18 L80,17 L100,19"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex flex-col items-end gap-1">
+              <p class="text-[#111418] dark:text-white text-base font-bold">
+                $415.50
+              </p>
+              <div
+                class="bg-gray-400 text-white text-[13px] font-bold px-2 py-0.5 rounded-md min-w-[64px] text-center"
+              >
+                -0.02%
+              </div>
+            </div>
+          </div>
+          <!-- AMZN Card -->
+          <div class="flex items-center gap-4 py-4 justify-between group">
+            <div class="flex flex-col">
+              <p
+                class="text-[#111418] dark:text-white text-lg font-bold leading-tight"
+              >
+                AMZN
+              </p>
+              <p class="text-[#617589] text-xs font-medium">Amazon.com, Inc.</p>
+            </div>
+            <div class="flex-1 flex justify-center px-4 h-8">
+              <svg
+                class="sparkline w-full h-full max-w-[80px]"
+                viewbox="0 0 100 30"
+              >
+                <path
+                  class="stroke-green-500"
+                  d="M0,20 L20,25 L40,15 L60,18 L80,10 L100,8"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex flex-col items-end gap-1">
+              <p class="text-[#111418] dark:text-white text-base font-bold">
+                $178.15
+              </p>
+              <div
+                class="bg-green-500 text-white text-[13px] font-bold px-2 py-0.5 rounded-md min-w-[64px] text-center"
+              >
+                +1.56%
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Meta -->
+        <div class="mt-8 mb-24 text-center">
+          <p class="text-xs text-[#617589]">
+            Real-time quotes powered by ClearTrade API.
+          </p>
+          <p class="text-xs text-[#617589] mt-1">
+            Last updated: Mar 15, 2024 4:00 PM EST
+          </p>
+        </div>
+      </main>
+      <nav
+        class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-2xl border-t border-gray-100 flex justify-around items-center pt-3 pb-4 px-2 z-50"
+      >
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'main.html'"
+        >
+          <span
+            class="material-symbols-outlined text-gray-400 group-active:text-primary"
+            >home</span
+          >
+          <span class="text-[10px] font-bold text-gray-400">Home</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'portfolio.html'"
+        >
+          <span class="material-symbols-outlined text-gray-400">bar_chart</span>
+          <span class="text-[10px] font-bold text-gray-400">Portfolio</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'watchlist.html'"
+        >
+          <span
+            class="material-symbols-outlined text-primary group-active:text-primary"
+            >candlestick_chart</span
+          >
+          <span class="text-[10px] font-bold text-primary">Watchlist</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'strategies.html'"
+        >
+          <span
+            class="material-symbols-outlined text-gray-400 group-active:text-primary"
+            >layers</span
+          >
+          <span class="text-[10px] font-bold text-gray-400">Strategies</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 group"
+          onclick="window.location.href = 'reports.html'"
+        >
+          <span
+            class="material-symbols-outlined text-gray-400 group-active:text-primary"
+            >description</span
+          >
+          <span
+            class="text-[10px] font-bold text-gray-400"
+            onclick="window.location.href = 'reports.html'"
+            >Reports</span
+          >
+        </button>
+      </nav>
+    </main>
+  </body>
+</html>

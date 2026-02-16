@@ -1,0 +1,374 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Search in Progress - ClearTrade</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+      }
+      .ios-blur {
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+      .dark .ios-blur {
+        background-color: rgba(16, 25, 34, 0.4);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+  <body class="min-h-screen font-display bg-white dark:bg-background-dark text-gray-900 dark:text-white">
+      <div class="px-4 py-6 opacity-40 select-none">
+        <div class="flex justify-between items-end mb-8">
+          <div>
+            <h1 class="text-3xl font-bold">Portfolio</h1>
+            <p class="text-gray-500">$124,592.00</p>
+          </div>
+          <div
+            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800"
+          ></div>
+        </div>
+        <div class="space-y-4">
+          <div
+            class="h-24 w-full bg-gray-100 dark:bg-gray-800 rounded-lg"
+          ></div>
+          <div
+            class="h-24 w-full bg-gray-100 dark:bg-gray-800 rounded-lg"
+          ></div>
+          <div
+            class="h-24 w-full bg-gray-100 dark:bg-gray-800 rounded-lg"
+          ></div>
+          <div
+            class="h-24 w-full bg-gray-100 dark:bg-gray-800 rounded-lg"
+          ></div>
+          <div
+            class="h-24 w-full bg-gray-100 dark:bg-gray-800 rounded-lg"
+          ></div>
+        </div>
+      </div>
+      <div class="fixed inset-0 ios-blur z-20 flex flex-col">
+        <div class="bg-white dark:bg-background-dark pt-12 pb-4 px-4 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="flex-1">
+              <label class="relative flex items-center h-11 w-full">
+                <div class="absolute left-3 text-gray-400">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >search</span
+                  >
+                </div>
+                <input
+                  autofocus=""
+                  class="w-full h-full pl-10 pr-10 bg-gray-100 dark:bg-gray-800 border-none rounded-xl text-gray-900 dark:text-white focus:ring-2 focus:ring-primary font-medium"
+                  type="text"
+                  value="APP"
+                />
+                <div class="absolute right-3 flex items-center">
+                  <button class="text-gray-400 hover:text-gray-600">
+                    <span class="material-symbols-outlined text-[20px]"
+                      >cancel</span
+                    >
+                  </button>
+                </div>
+              </label>
+            </div>
+            <button class="text-primary font-semibold text-base px-1" 
+                    onclick="window.location.href = 'watchlist.html'">
+              Cancel
+            </button>
+          </div>
+          <div
+            class="mt-4 bg-white dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-xl"
+          >
+            <div
+              class="flex items-center gap-4 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-50 dark:border-gray-800 cursor-pointer"
+              onclick="window.location.href = 'apple.html'"
+            >
+              <div
+                class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"
+              >
+                <span class="material-symbols-outlined">trending_up</span>
+              </div>
+              <div class="flex flex-col flex-1">
+                <p class="text-gray-900 dark:text-white text-[15px] font-bold">
+                  <span class="text-primary">APP</span>L
+                </p>
+                <p class="text-gray-500 dark:text-gray-400 text-xs font-medium">
+                  Apple Inc. • NASDAQ
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-gray-300"
+                >chevron_right</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-50 dark:border-gray-800 cursor-pointer"
+            >
+              <div
+                class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"
+              >
+                <span class="material-symbols-outlined">trending_up</span>
+              </div>
+              <div class="flex flex-col flex-1">
+                <p class="text-gray-900 dark:text-white text-[15px] font-bold">
+                  AMAT
+                </p>
+                <p class="text-gray-500 dark:text-gray-400 text-xs font-medium">
+                  <span class="text-primary">App</span>lied Materials Inc. • NASDAQ
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-gray-300"
+                >chevron_right</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
+            >
+              <div
+                class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-500"
+              >
+                <span class="material-symbols-outlined">bar_chart</span>
+              </div>
+              <div class="flex flex-col flex-1">
+                <p
+                  class="text-gray-900 dark:text-white text-[15px] font-bold line-clamp-1"
+                >
+                  <span class="text-primary">APP</span>X
+                </p>
+                <p class="text-gray-500 dark:text-gray-400 text-xs font-medium">
+                  Tradr 2X Long APP Daily ETF • Nasdaq
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-gray-300"
+                >chevron_right</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="mt-auto w-full z-40">
+          <div
+            class="bg-gray-200/95 dark:bg-gray-900/95 backdrop-blur-2xl pt-2 pb-8 px-1.5 border-t border-gray-300 dark:border-gray-700"
+          >
+            <div class="flex flex-col gap-3">
+              <div
+                class="flex justify-around text-gray-600 dark:text-gray-300 font-medium text-sm py-1"
+              >
+                <span>APP</span>
+                <div class="w-px h-4 bg-gray-400/50 self-center"></div>
+                <span>Apple</span>
+                <div class="w-px h-4 bg-gray-400/50 self-center"></div>
+                <span>APPLE</span>
+              </div>
+              <div class="flex gap-1.5 justify-center">
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  Q
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  W
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  E
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  R
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  T
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  Y
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  U
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  I
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  O
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  P
+                </div>
+              </div>
+              <div class="flex gap-1.5 justify-center">
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  A
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  S
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  D
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  F
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  G
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  H
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  J
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  K
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  L
+                </div>
+              </div>
+              <div class="flex gap-1.5 px-1 items-center">
+                <div
+                  class="bg-gray-100 dark:bg-gray-600 h-10 flex-1 flex items-center justify-center rounded-md shadow-sm text-gray-900 dark:text-white"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >shift</span
+                  >
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  Z
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  X
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  C
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  V
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  B
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  N
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 w-[8.5%] flex items-center justify-center rounded-md shadow-sm text-lg text-gray-900 dark:text-white"
+                >
+                  M
+                </div>
+                <div
+                  class="bg-gray-100 dark:bg-gray-600 h-10 flex-1 flex items-center justify-center rounded-md shadow-sm text-gray-900 dark:text-white"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >backspace</span
+                  >
+                </div>
+              </div>
+              <div class="flex gap-1.5 px-1 pb-2">
+                <div
+                  class="bg-gray-100 dark:bg-gray-600 h-10 w-[25%] flex items-center justify-center rounded-md shadow-sm text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  123
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-700 h-10 flex-1 flex items-center justify-center rounded-md shadow-sm text-sm text-gray-900 dark:text-white"
+                >
+                  space
+                </div>
+                <div
+                  class="bg-primary h-10 w-[25%] flex items-center justify-center rounded-md shadow-sm text-white font-semibold text-sm"
+                >
+                  search
+                </div>
+              </div>
+            </div>
+            <div
+              class="mx-auto mt-4 w-32 h-1.5 bg-black dark:bg-white/30 rounded-full"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
